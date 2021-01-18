@@ -35,13 +35,13 @@ console.table(oldest);
 
 // 6. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-const category = document.querySelector('.mw-category');
-const links = Array.from(category.querySelectorAll('a'));
-// it's possible to do like that:
-// const links = [...category.querySelectorAll('a')];
-const de = links
-            .map(link => link.textContent)
-            .filter(streetName => streetName.includes('de'));
+// const category = document.querySelector('.mw-category');
+// const links = Array.from(category.querySelectorAll('a'));
+// // it's possible to do like that:
+// // const links = [...category.querySelectorAll('a')];
+// const de = links
+//             .map(link => link.textContent)
+//             .filter(streetName => streetName.includes('de'));
 
 // 7. Sort exercise
 // Sort the people alphabetically by last name
@@ -65,3 +65,44 @@ const transportation = data.reduce(function(obj, item) {
 }, {});
 
 console.log(transportation);
+
+// 9. Some and every checks
+// Array.prototype.some() // is at least one person 19?
+// const isAdult = people2.some(function(person) {
+//     const currentYear = (new Date()).getFullYear();
+//     if (currentYear - person.year >= 19) {
+//         return true;
+//     }
+// });
+const isAdult = people2.some(person => ((new Date()).getFullYear()) - person.year >= 19);
+console.log({isAdult});
+
+// Array.prototype.every() // is everyone 19?
+const allAdults = people2.every(person => ((new Date()).getFullYear()) - person.year >= 19);
+console.log({allAdults});
+
+// 10. Array.prototype.find()
+// Find is like filter, but instead returns just the one you are looking for
+// Find the commnet with th ID 215563
+
+// const comment = comments.find(function(comment) {
+//     if (comment.id == 215563) {
+//         return true;
+//     }
+// });
+
+const comment = comments.find(comment => comment.id == 215563);
+
+console.log(comment);
+
+// 11. Array.prototype.findIndex()
+// Find the comment with this ID
+// Delete the coment with the ID of 862538
+const index = comments.findIndex(comment => comment.id === 862538);
+// comments.splice(index, 1);
+const newComments = [
+    ...comments.slice(0, index),
+    ...comments.slice(index + 1)
+];
+console.table(comments);
+console.table(newComments);
