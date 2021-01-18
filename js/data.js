@@ -15,4 +15,19 @@ const inventors = [
 
 const people = ['Jobs, Steve', 'Wojcicki, Susan', 'Raniere, Keith', 'Trump, Fred', 'Maradona, Diego', 'James, LeBron', 'Ronaldo, Cristiano', 'Ross, Bob', 'Eilish, Billie', 'Lenon, John', 'Jackson, Michael', 'Portner, Emma', 'Collins, Lily', 'Hoffman, Abbie', 'Jolie, Angelina', 'Peterson, Jordan', 'Trump, Donald', 'Biden, Joe', 'Harris, Kamala', 'Thatcher, Margaret', 'Musk, Elon', 'Tesla, Nikolas', 'Gadot, Gal', 'Carano, Gina', 'Mandela, Nelson', 'Monroe, Marlyn', 'Gates, Bill', 'Castro, Fidel'];
 
-export { inventors, people }
+const people2 = [
+    { name: 'Wes', year: 1988 },
+    { name: 'Kait', year: 1986 },
+    { name: 'Irv', year: 1970 },
+    { name: 'Lux', year: 2015 }
+];
+
+const comments = [
+    { text: 'Love this!', id: 568563 },
+    { text: 'Super good!', id: 862538 },
+    { text: 'You are the best!', id: 568563 },
+    { text: 'Ramen is my favorite food ever!', id: 215563 },
+    { text: 'Nice Nice Nice!', id: 992631 }
+];
+
+export { inventors, people, people2, comments }

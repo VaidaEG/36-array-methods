@@ -1,4 +1,4 @@
-import { inventors, people } from './data.js';
+import { inventors, people, people2, comments } from './data.js';
 
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1800's
